@@ -1,3 +1,29 @@
+// fonts
+
+@font-face {
+  font-family: Gilroy;
+  src: url("./resource/fonts/Gilroy/Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"),
+    url("./resource/fonts/Gilroy/Gilroy-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("./resource/fonts/Gilroy/Gilroy-Medium.woff") format("woff"),
+    url("./resource/fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url("./resource/fonts/Gilroy/Gilroy-Thin.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"),
+    url("./resource/fonts/Gilroy/Gilroy-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("./resource/fonts/Gilroy/Gilroy-Thin.woff") format("woff"),
+    url("./resource/fonts/Gilroy/Gilroy-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
 html,
 body {
   font-family: "Gilroy";
@@ -720,30 +746,4 @@ input[class="toggle"] {
   .gender-box {
     grid-column: 1/13;
   }
-}
-
-// fonts
-
-@font-face {
-  font-family: Gilroy;
-  src: url("/resource/fonts/Gilroy/Gilroy-Medium.eot");
-  src: local("Gilroy Medium"), local("Gilroy-Medium"),
-    url("/resource/fonts/Gilroy/Gilroy-Medium.eot?#iefix")
-      format("embedded-opentype"),
-    url("/resource/fonts/Gilroy/Gilroy-Medium.woff") format("woff"),
-    url("/resource/fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: Gilroy;
-  src: url("/resource/fonts/Gilroy/Gilroy-Thin.eot");
-  src: local("Gilroy Medium"), local("Gilroy-Medium"),
-    url("/resource/fonts/Gilroy/Gilroy-Thin.eot?#iefix")
-      format("embedded-opentype"),
-    url("/resource/fonts/Gilroy/Gilroy-Thin.woff") format("woff"),
-    url("/resource/fonts/Gilroy/Gilroy-Thin.ttf") format("truetype");
-  font-weight: 100;
-  font-style: normal;
 }
