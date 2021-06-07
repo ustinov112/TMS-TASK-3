@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="./dist/css/normalize.css" rel="stylesheet">
+  <link href="./dist/css/main.css" rel="stylesheet">
+  <title>Dashboard</title>
+  <script src="./js/pie.js" async></script>
+</head>
+
+<body>
+  <!-- grid-box -->
+  <div class="grid__container">
+    <!-- nav -->
+    <section class="sidebar">
+      <nav class="navigation">
+        <a class="navigation-logo" href="#"><img src="./resource/images/logo.png" alt="VK"></a>
+        <ul class="navigation__menu-item">
+          <li class="menu-item">
+            <a class="menu-item-link" href="#">
+              <i class="fas fa-home"></i>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item-link" href="#">
+              <i class="far fa-newspaper"></i>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item-link" href="#">
+              <i class="fas fa-user-friends"></i>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item-link" href="#">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item-link" href="#">
+              <i class="fas fa-play"></i>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item-link" href="#">
+              <i class="fas fa-chart-bar"></i>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-item-link" href="#">
+              <i class="fas fa-cog"></i>
+            </a>
+          </li>
+          
+        </ul>
+      </nav>
+      <div class="toggle-btn" id="_1st-toggle-btn">
+        <input class="toggle" type="checkbox" checked>
+        <span></span>
+      </div>
+    </section>
+    <!-- blocks and head -->
+    <main class="main">
+      <!-- head -->
+      <section class="main-head">
+        <div class="head__section-left">
+          <h3 class="head__title">Statistics</h3>
+          <div class="search-form">
+            <i class="fas fa-search search-icon" aria-hidden="true"></i>
+            <input class="head__search" type="search" placeholder="Search">
+          </div>
+          <a href="#"><img class="notification" src="./resource/images/notification 2.png" alt="notification"></a>
+        </div>
+        <div class="head__section-right">
+          <button class="head__button">
+            <p class="head_button-text text">Anya</p>
+            <img class="head__button-avatar" src="./resource/images/Rectangle 276.png" alt="avatar">
+            <i class="fa fa-caret-down"></i>
+          </button>
+        </div>
+      </section>
+      <!-- blocks -->
+      <div class="main__grid-container">
+        <!-- friends block -->
+
+      <div class="friends__box dashboard__style-box">
+        <div class="wrapper1">
+          <h3 class="wrapper-title title">Friends</h3>
+          <div class="menu__wrapper">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+        <div class="wrapper2">
+          <p class="wrapper-text text">271 people</p>
+          <span class="wrapper-indicator">+0.7% 
+            <i class="fas fa-arrow-up"></i>
+          </span>
+        </div>
+      </div>
+
+        <!-- visitors block -->
+
+        <div class="visitors__box dashboard__style-box">
+          <div class="wrapper1">
+            <h3 class="wrapper-title title">Unique visitors</h3>
+            <div class="menu__wrapper">
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
+          </div>
+          <div class="wrapper2">
+            <p class="wrapper-text text">69 people</p>
+            <span class="wrapper-indicator"> -1.7% 
+              <i class="fas fa-arrow-down"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- followers block -->
+
+        <div class="followers__box dashboard__style-box">
+          <div class="wrapper1">
+            <h3 class="wrapper-title title">Followers</h3>
+            <div class="menu__wrapper">
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
+          </div>
+          <div class="wrapper2">
+            <p class="wrapper-text text">288 people</p>
+            <span class="wrapper-indicator"> +1%
+               <i class="fas fa-arrow-up"></i>
+              </span>
+          </div>
+        </div>
+
+        <!-- audience block -->
+
+        <div class="audience__box dashboard__style-box">
+          <div class="audience__container">
+            <h3 class="audience-title title">Audience reach</h3>
+            <button class="audience__button">
+              <p class="audience-calendar text-button-checkbox"> 31/01/2020 – 06/02/2020
+                 <i class="fa fa-caret-down"></i>
+                </p>
+            </button>
+            <div class="checkbox-container">
+              <div>
+                <input class="purple-checkbox" type="checkbox" id="cb1" checked>
+                 <label class="cb1" for="cb1">Total</label>
+              </div>
+            <div>
+              <input class="pink-checkbox" type="checkbox" id="cb2"> 
+              <label class="cb2" for="cb2">Follower</label>
+            </div>
+
+            </div>
+          </div>
+          <div class="audience-img">
+          <img class="audience__chart" src="./resource/images/Group 109.png" alt="chart">
+          </div>
+        </div>
+
+        <!-- device block -->
+
+        <div class="device-box dashboard__style-box">
+          <h3 class="device-title title">Reach by device</h3>
+          <div class="pie-chart">
+            <canvas id="myChart"></canvas>
+          </div>
+        </div>
+
+        <!-- gender block -->
+        <div class="gender-box dashboard__style-box">
+          <div class="gender-title-box">
+            <h3 class="gender-title title">Gender / Age</h3>
+            <span class="gender__checkbox">
+              <input class="pink" type="checkbox">
+                <p class="geo__input-text text-button-checkbox">woman</p>
+              <input class="purple" type="checkbox">
+                <p class="geo__input-text text-button-checkbox">man</p>
+            </span>
+          </div>
+          <div class="gender-img">
+            <img class="bar__chart" src="./resource/images/Group 126.png" alt="bar-chart">
+          </div>
+        </div>
+
+        <!-- geo-progress block -->
+        <div class="geo-box dashboard__style-box">
+          <div class="geo-title-box">
+            <h3 class="geo-title title">Geo</h3>
+            <div class="geo-a">
+            <a class="geo-country" href="#">Country</a>
+            <a class="geo-city" href="#">City</a>
+            </div>
+          </div>
+          <div class="geo-progress-box">
+            <div class="progress-left">
+              <div class="progress-text">
+                <h3 class="progress-title title">Russia</h3>
+                <p class="progress-indicator">94%</p>
+              </div>
+              <progress value="94" max="100"> </progress>
+
+              <div class="progress-text">
+                <h3 class="progress-title title">Ukraine</h3>
+                <p class="progress-indicator">0.20%</p>
+              </div>
+              <progress value="7" max="100"> 32% </progress>
+
+              <div class="progress-text">
+                <h3 class="progress-title title">Mongolia</h3>
+                <p class="progress-indicator">0.13%</p>
+              </div>
+              <progress value="9" max="100"> 32% </progress>
+            </div>
+          
+            <div class="progress-right">
+              <div class="progress-text">
+                <h3 class="progress-title title">China</h3>
+                <p class="progress-indicator">0.26%</p>
+              </div>
+              <progress  value="15" max="100"> 32% </progress>
+
+              <div class="progress-text">
+                <h3 class="progress-title title">USA</h3>
+                <p class="progress-indicator">0.20%</p>
+              </div>
+              <progress value="9" max="100"> 32% </progress>
+
+              <div class="progress-text">
+                <h3 class="progress-title title">Other</h3>
+                <p class="progress-indicator">1.37%</p>
+              </div>
+              <progress value="20" max="100"> 32% </progress>
+          
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
+</body>
+</html>
