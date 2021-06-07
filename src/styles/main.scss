@@ -725,16 +725,24 @@ input[class="toggle"] {
 // fonts
 @font-face {
   font-family: "Gilroy";
-  src: url("/resource/fonts/Gilroy/gilroy-medium-webfont.woff2") format("woff2"),
-    url("/resource/fonts/Gilroy/gilroy-medium-webfont.woff") format("woff");
+  src: url("/resource/fonts/Gilroy/Gilroy-Medium.eot");
+  src: local("Gilroy Medium"), local("Gilroy-Medium"),
+    url("/resource/fonts/Gilroy/Gilroy-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("/resource/fonts/Gilroy/Gilroy-Medium.woff") format("woff"),
+    url("/resource/fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/resource/fonts/Gilroy/gilroy-thin-webfont.woff2") format("woff2"),
-    url("/resource/fonts/Gilroy/gilroy-thin-webfont.woff") format("woff");
-  font-weight: normal;
+  src: url("/resource/fonts/Gilroy/Gilroy-Thin.eot");
+  src: local("Gilroy Thin"), local("Gilroy-Thin"),
+    url("/resource/fonts/Gilroy/Gilroy-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    url("/resource/fonts/Gilroy/Gilroy-Thin.woff") format("woff"),
+    url("/resource/fonts/Gilroy/Gilroy-Thin.ttf") format("truetype");
+  font-weight: 100;
   font-style: normal;
 }
