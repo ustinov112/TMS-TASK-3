@@ -725,5 +725,16 @@ input[class="toggle"] {
 // fonts
 @font-face {
   font-family: "Gilroy";
-  src: url("/resource/fonts/Gilroy/GloryTSI-Medium.ttf");
+  src: url("/resource/fonts/Gilroy/gilroy-medium-webfont.woff2") format("woff2"),
+    url("/resource/fonts/Gilroy/gilroy-medium-webfont.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/resource/fonts/Gilroy/gilroy-thin-webfont.woff2") format("woff2"),
+    url("/resource/fonts/Gilroy/gilroy-thin-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
